@@ -125,166 +125,190 @@
 // - tag:            "Available", "Unavailable", "Rented", or "Available Soon"
 const gearData = [
   {
-    name: "JBL PartyBox 120 Boombox",      // <--- CHANGE name
-    price: 30,                             // <--- CHANGE price
-    img: "images/JBL 120.jpg", // <--- CHANGE img
-    location: "Williamsburg",              // <--- CHANGE location
-    description: "Huge battery-powered Bluetooth speaker. Perfect for parties & events. Aux cable included.", // <--- CHANGE description
-    tag: "Available",                       // <--- CHANGE tag
-    typeform: "https://form.typeform.com/to/QDdHCHMu"  // <--- PUT YOUR TYPEFORM LINK HERE
+    name: "JBL PartyBox 120 Boombox",
+    price: 30,
+    img: "images/JBL 120.jpg",
+    location: "Williamsburg",
+    description: "Huge battery-powered Bluetooth speaker. Perfect for parties and events, indoors or outdoors. Aux cable included.",
+    tag: "Available",
+    typeform: "https://form.typeform.com/to/QDdHCHMu",
+    keywords: ["speaker", "Bluetooth speaker", "party speaker", "boombox", "JBL"]
   },
 
-    {
-    name: "Mic with Desk Stand",      // <--- CHANGE name
-    price: 20,                             // <--- CHANGE price
-    img: "images/Microphone.jpg", // <--- CHANGE img
-    location: "Williamsburg",              // <--- CHANGE location
-    description: "Mic", // <--- CHANGE description
-    tag: "Available",                       // <--- CHANGE tag
-    typeform: "https://form.typeform.com/to/QDdHCHMu"  // <--- PUT YOUR TYPEFORM LINK HERE
-  },
-  
   {
-    name: "Instax Mini 12 with Film",
+    name: "Podcast Microphone with Desk Stand",
+    price: 20,
+    img: "images/Microphone.jpg",
+    location: "Williamsburg",
+    description: "High-quality USB microphone with adjustable desk stand. Great for podcasting, streaming, recording, or Zoom meetings.",
+    tag: "Available",
+    typeform: "https://form.typeform.com/to/QDdHCHMu",
+    keywords: ["microphone", "podcast mic", "USB mic", "desk mic", "recording microphone"]
+  },
+
+  {
+    name: "Fujifilm Instax Mini 12 Camera (with Film)",
     price: 15,
     img: "images/Instax.jpg",
     location: "East Williamsburg",
-    description: "Classic Polaroid camera for retro party snapshots. 1 roll of film included. Comes with a case",
+    description: "Classic instant camera for retro party snapshots. Includes 1 pack of film and a protective case.",
     tag: "Available",
-    typeform: "https://form.typeform.com/to/ilzcOgGw"  // <--- PUT YOUR TYPEFORM LINK HERE
+    typeform: "https://form.typeform.com/to/ilzcOgGw",
+    keywords: ["polaroid", "instant camera", "Instax", "Fujifilm", "film camera"]
   },
+
   {
-    name: "GoPro Hero 10",
+    name: "GoPro Hero 10 Action Camera",
     price: 20,
     img: "images/gopro_hero10.avif",
     location: "Williamsburg",
-    description: "Adventure camera with mounts & cable. For skate, bike, or beach days.",
+    description: "Waterproof adventure camera with mounts and charging cable. Perfect for sports, skate, bike, or beach days.",
     tag: "Available",
-    typeform: "https://form.typeform.com/to/gkeA9LzS"  // <--- PUT YOUR TYPEFORM LINK HERE
+    typeform: "https://form.typeform.com/to/gkeA9LzS",
+    keywords: ["GoPro", "action camera", "sports camera", "adventure camera", "waterproof camera"]
   },
+
   {
-    name: "Camping Tent for 2 people",
+    name: "2-Person Camping Tent Set (with Gear)",
     price: 25,
     img: "images/2 Person Tent.jpg",
     location: "Williamsburg",
-    description: "Tent, sleeping bags, pads & lantern. Grab-n-go for your next outdoor trip.",
+    description: "Lightweight tent with 2 sleeping bags, sleeping pads, and lantern. Easy grab-n-go kit for your next camping trip.",
     tag: "Available",
-    typeform: "https://form.typeform.com/to/XXXXXXXX"  // <--- PUT YOUR TYPEFORM LINK HERE
+    typeform: "https://form.typeform.com/to/XXXXXXXX",
+    keywords: ["tent", "camping gear", "2-person tent", "outdoor tent", "sleeping bags"]
   },
 
-    {
-    name: "Baseball Gloves (Two)",
+  {
+    name: "Baseball Gloves (Pair)",
     price: 25,
     img: "images/Gloves.JPG",
     location: "Williamsburg",
-    description: "Gloves",
+    description: "Two adult-size baseball gloves for playing catch or pickup games in the park.",
     tag: "Available",
-    typeform: "https://form.typeform.com/to/XXXXXXXX"  // <--- PUT YOUR TYPEFORM LINK HERE
+    typeform: "https://form.typeform.com/to/XXXXXXXX",
+    keywords: ["baseball glove", "mitt", "gloves", "catch", "baseball"]
   },
 
-    {
-    name: "Olympus Stylus Epic Zoom 80 Film Camera with 1 roll",
+  {
+    name: "Olympus Stylus Epic Zoom 80 Film Camera + 1 Roll Film",
     price: 25,
     img: "images/Olympus.jpg",
     location: "Williamsburg",
-    description: "Film camera",
+    description: "Vintage 35mm film camera. 1 roll of film included. Perfect for artsy, retro, or candid photo shoots.",
     tag: "Available",
-    typeform: "https://form.typeform.com/to/XXXXXXXX"  // <--- PUT YOUR TYPEFORM LINK HERE
+    typeform: "https://form.typeform.com/to/XXXXXXXX",
+    keywords: ["film camera", "Olympus", "point-and-shoot", "35mm camera", "vintage camera"]
   },
 
-      {
-    name: "360 Cam",
+  {
+    name: "Insta360 ONE X2 360° Camera",
     price: 25,
     img: "images/360 Cam.jpg",
     location: "Williamsburg",
-    description: "360 Cam",
+    description: "Compact 360-degree camera for immersive videos and photos. Includes cable and carry pouch.",
     tag: "Available",
-    typeform: "https://form.typeform.com/to/XXXXXXXX"  // <--- PUT YOUR TYPEFORM LINK HERE
+    typeform: "https://form.typeform.com/to/XXXXXXXX",
+    keywords: ["360 camera", "Insta360", "VR camera", "panoramic camera", "video camera"]
   },
 
-      {
-    name: "Camping Chairs / Beach Chairs (Set of 2)",
+  {
+    name: "Camping/Beach Chairs (Set of 2)",
     price: 20,
     img: "images/Camping Chair.jpg",
     location: "Williamsburg",
-    description: "Camping chair",
+    description: "Two lightweight, foldable chairs for park, camping, or beach days. Easy to carry and comfy.",
     tag: "Available",
-    typeform: "https://form.typeform.com/to/XXXXXXXX"  // <--- PUT YOUR TYPEFORM LINK HERE
+    typeform: "https://form.typeform.com/to/XXXXXXXX",
+    keywords: ["camping chair", "beach chair", "folding chair", "outdoor chair", "chairs"]
   },
-  
+
   {
-    name: "Spikeball Set",
+    name: "Spikeball Set (Complete)",
     price: 10,
     img: "images/spikeball_set.jpg",
     location: "Williamsburg",
-    description: "Spikeball set, perfect for parks or beach. Everything included.",
+    description: "Everything you need for Spikeball—net, ball, and carry bag. Perfect for parks or beach days.",
     tag: "Available",
-    typeform: "https://form.typeform.com/to/XXXXXXXX"  // <--- PUT YOUR TYPEFORM LINK HERE
+    typeform: "https://form.typeform.com/to/XXXXXXXX",
+    keywords: ["spikeball", "roundnet", "beach game", "park game", "outdoor game"]
   },
+
   {
-    name: "Fender Jazz Bass Guitar",
+    name: "Fender Jazz Bass Guitar with Gig Bag",
     price: 20,
     img: "images/Fender Bass.JPG",
     location: "Williamsburg",
-    description: "Classic electric bass, includes gig bag and cable. Great for jams and gigs.",
+    description: "Classic electric bass, includes gig bag and cable. Great for jams, gigs, or recording.",
     tag: "Available",
-    typeform: "https://form.typeform.com/to/XXXXXXXX"  // <--- PUT YOUR TYPEFORM LINK HERE
+    typeform: "https://form.typeform.com/to/XXXXXXXX",
+    keywords: ["bass", "bass guitar", "Fender", "electric bass", "jazz bass"]
   },
+
   {
-    name: "Toolbox w/ Drill, Hammer, Etc.",
+    name: "Toolbox with Power Drill & Hand Tools",
     price: 15,
     img: "images/Toolbox.jpg",
     location: "East Williamsburg",
-    description: "All the basics — drill, screwdrivers, hammer, tape, level, wrenches, bits. Ready for DIY projects.",
+    description: "Fully loaded toolbox with drill, screwdrivers, hammer, tape, level, wrenches, and bits—ready for any DIY project.",
     tag: "Available",
-    typeform: "https://form.typeform.com/to/XXXXXXXX"  // <--- PUT YOUR TYPEFORM LINK HERE
+    typeform: "https://form.typeform.com/to/XXXXXXXX",
+    keywords: ["toolbox", "drill", "tools", "hand tools", "DIY kit"]
   },
+
   {
     name: "Babolat Aeropro Drive Tennis Racket",
     price: 10,
     img: "images/Tennis.JPG",
     location: "Williamsburg",
-    description: "Pro-quality racket, pre-strung, grip tape replaced monthly.",
+    description: "Pro-quality, pre-strung tennis racket with fresh grip. Ideal for all levels.",
     tag: "Available",
-    typeform: "https://form.typeform.com/to/XXXXXXXX"  // <--- PUT YOUR TYPEFORM LINK HERE
+    typeform: "https://form.typeform.com/to/XXXXXXXX",
+    keywords: ["tennis racket", "Babolat", "racquet", "tennis", "sports"]
   },
-  
+
   {
-    name: "PUG Mini Soccer Goals (pair)",
+    name: "PUGG Mini Soccer Goals (Pair)",
     price: 10,
     img: "images/soccer_goals.jpeg",
     location: "Clinton Hill",
-    description: "Two pop-up goals, carry bag included. Great for pickup games in the park!",
+    description: "Two portable pop-up soccer goals with carry bag. Great for pickup games and practice in the park.",
     tag: "Available",
-    typeform: "https://form.typeform.com/to/XXXXXXXX"  // <--- PUT YOUR TYPEFORM LINK HERE
+    typeform: "https://form.typeform.com/to/XXXXXXXX",
+    keywords: ["soccer goals", "mini goals", "PUGG", "pop-up goals", "soccer net"]
   },
+
   {
-    name: "Pickleball Net + Paddles (4)",
+    name: "Pickleball Net & 4 Paddle Set",
     price: 16,
     img: "images/Pickleball.jpg",
     location: "East Williamsburg",
-    description: "Full-size pickleball net, 4 paddles, balls, rolling carry bag. The park favorite!",
-    tag: "Rented",           // <--- For "Rented" or "Unavailable", card is faded and button is disabled
-    typeform: "https://form.typeform.com/to/XXXXXXXX"  // <--- PUT YOUR TYPEFORM LINK HERE
-    
+    description: "Full-size pickleball net, 4 paddles, balls, and rolling carry bag—everything for a group game!",
+    tag: "Rented",
+    typeform: "https://form.typeform.com/to/XXXXXXXX",
+    keywords: ["pickleball", "pickleball net", "paddle set", "sports set", "racquet sports"]
   },
+
   {
     name: "Yeti Tundra Cooler (45qt)",
     price: 18,
     img: "images/Yeti Cooler.jpg",
     location: "Williamsburg",
-    description: "Legendary ice retention. Holds 26 cans or keeps your BBQ party going for days.",
+    description: "Rugged cooler with legendary ice retention. Holds 26 cans. Perfect for BBQs, camping, or beach trips.",
     tag: "Unavailable",
-    typeform: "https://form.typeform.com/to/XXXXXXXX"  // <--- PUT YOUR TYPEFORM LINK HERE
+    typeform: "https://form.typeform.com/to/XXXXXXXX",
+    keywords: ["cooler", "Yeti", "ice chest", "camping cooler", "party cooler"]
   },
+
   {
     name: "Sony SRS-XP700 Party Speaker",
     price: 28,
     img: "images/Sony Speaker.jpg",
     location: "Williamsburg",
-    description: "Loud, rechargeable, with built-in party lights. Bluetooth or aux. Weather resistant.",
+    description: "Loud, rechargeable Bluetooth speaker with built-in party lights. Weather resistant and portable.",
     tag: "Unavailable",
-    typeform: "https://form.typeform.com/to/XXXXXXXX"  // <--- PUT YOUR TYPEFORM LINK HERE
+    typeform: "https://form.typeform.com/to/XXXXXXXX",
+    keywords: ["speaker", "Sony", "party speaker", "Bluetooth speaker", "portable speaker"]
   }
 ];
 
