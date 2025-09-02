@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Spare – Rent Gear in Brooklyn | Speakers, Cameras & More </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Rent speakers, cameras, games, camping gear, & more from your Brooklyn neighbors with Spare. Quick pickup, no clutter, no waste. Don't buy it, Spare it!">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+  <meta charset="UTF-8" />
+  <title>Spare – Rent Gear in Brooklyn | Speakers, Cameras & More</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rent speakers, cameras, games, camping gear, & more from your Brooklyn neighbors with Spare. Quick pickup, no clutter, no waste. Don't buy it, Spare it!" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <!-- Small perf win for Typeform popup -->
+  <link rel="preconnect" href="https://embed.typeform.com" crossorigin>
 
-<script type="application/ld+json">
-{
+  <!-- Site-level structured data -->
+  <script type="application/ld+json">
+  {
     "@context": "https://schema.org",
     "@type": "RentalStore",
     "name": "Spare – Gear Rentals",
@@ -20,100 +23,333 @@
     "url": "https://www.usespare.com",
     "areaServed": "Brooklyn, NY",
     "priceRange": "$10–$50/day"
-}
-</script>
-
+  }
+  </script>
 
   <!-- Tailwind CDN for utility-first styling -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { background: #f9fafb; }
-  
     @media (max-width: 500px) {
-  .logo-row {
-    gap: 0.4rem !important;
-  }
-  .logo-dot {
-    width: 1.6rem !important;
-    height: 1.6rem !important;
-  }
-  .logo-word {
-    font-size: 1em !important;
-  }
-}
-.gear-card-title {}
-.gear-card-price {margin-bottom: 1px;}
-.gear-card-location { margin-bottom: 1px;
-                      font-style: italic;
-                      font-size: .9rem !important;}
-.gear-card-tag {
- 
-  margin-left: -2px;
-                  margin-top: 0px !important;      /* Remove space above */
-                  margin-bottom: 4px; /* Reduce space below; tweak as needed */
-                  padding-top: 2px;   /* Slimmer top/bottom padding */
-                  padding-bottom: 2px;}
-.gear-card-desc { /* your custom CSS here */ }
-.gear-card-btn { /* your custom CSS here */ }
-
-    
+      .logo-row { gap: 0.4rem !important; }
+      .logo-dot { width: 1.6rem !important; height: 1.6rem !important; }
+      .logo-word { font-size: 1em !important; }
+    }
+    .gear-card-price { margin-bottom: 1px; }
+    .gear-card-location {
+      margin-bottom: 1px;
+      font-style: italic;
+      font-size: .9rem !important;
+    }
+    .gear-card-tag {
+      margin-left: -2px;
+      margin-top: 0px !important;
+      margin-bottom: 4px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
   </style>
 </head>
 
-
-  
 <body class="min-h-screen flex flex-col bg-gray-50">
 
   <!-- ========== HEADER/BANNER ========== -->
   <header id="mainHeader" class="bg-white shadow-sm py-5 px-4 z-50 relative">
     <div class="flex items-center gap-3 select-none mb-2 logo-row" style="min-height:2.3rem; gap: 0.6rem">
-       <span class="logo-dot" style="display:inline-block;width:2.1rem;height:2.1rem;background:#ff6600;border-radius:50%"></span>
-      <span class="text-2xl font-bold tracking-tight logo-word"
-        style="color: #111827; font-size: 1.4em; font-weight: 700; letter-spacing: 0.01em;">Spare</span>
+      <span class="logo-dot" style="display:inline-block;width:2.1rem;height:2.1rem;background:#ff6600;border-radius:50%"></span>
+      <span class="text-2xl font-bold tracking-tight logo-word" style="color:#111827;font-size:1.4em;font-weight:700;letter-spacing:.01em;">Spare</span>
     </div>
     <div class="flex flex-col items-center max-w-2xl mx-auto">
       <h1 class="text-3xl sm:text-5xl font-bold text-gray-900 mb-2 text-center">
-        Rent What You Need,<br> <span class="text-orange-500">Right Near You.</span>
+        Rent What You Need,<br><span class="text-orange-500">Right Near You.</span>
       </h1>
-    <p id="mainSubHeader" class="text-lg text-gray-600 text-center max-w-xl">
+      <p id="mainSubHeader" class="text-lg text-gray-600 text-center max-w-xl">
         Don’t buy it, <span class="text-orange-500 font-bold">Spare</span> it.<br>
-        Rent speakers, cameras, camping gear, games, & more from your Brooklyn neighbors. Quick pickup, no clutter, no waste.
+        Rent speakers, cameras, camping gear, games, &amp; more from your Brooklyn neighbors. Quick pickup, no clutter, no waste.
       </p>
     </div>
   </header>
 
-  <!-- ========== MAIN GEAR GRID ========== -->
+  <!-- ========== MAIN GEAR GRID (HARDCODED) ========== -->
   <main class="flex-grow px-4 py-10 max-w-6xl mx-auto">
     <section>
-   
       <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Available to Rent Now</h2>
-      <div id="gearGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+
+      <div id="gearGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- ITEM: JBL PartyBox 120 Boombox START -->
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col relative">
+          <img loading="lazy" decoding="async" src="images/JBL 120.jpg" alt="JBL PartyBox 120 Boombox battery Bluetooth speaker" class="rounded-xl mb-4 h-44 w-full object-cover" fetchpriority="high">
+          <div class="flex-1">
+            <div class="font-bold text-lg mb-1">JBL PartyBox 120 Boombox</div>
+            <div class="text-orange-500 font-bold">$35/day</div>
+            <div class="gear-card-location text-sm text-gray-500 italic mb-1">Williamsburg pickup</div>
+            <div class="gear-card-tag inline-block text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold mb-1">Available</div>
+            <div class="text-gray-600 text-sm mb-3">Huge battery-powered Bluetooth speaker for indoor/outdoor parties. Aux cable included.</div>
+          </div>
+          <a href="https://form.typeform.com/to/QDdHCHMu" class="request-to-book-btn mt-auto font-bold rounded-xl px-5 py-3 text-center shadow transition bg-orange-500 hover:bg-orange-600 text-white" target="_blank" rel="noopener">Request to Book</a>
+        </div>
+        <!-- ITEM: JBL PartyBox 120 Boombox END -->
+
+        <!-- ITEM: SM58 Microphone START -->
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col relative">
+          <img loading="lazy" decoding="async" src="images/SM58 Mic.JPG" alt="Shure SM58 microphone with desk stand and USB interface" class="rounded-xl mb-4 h-44 w-full object-cover" fetchpriority="high">
+          <div class="flex-1">
+            <div class="font-bold text-lg mb-1">SM58 Microphone w/ Desk Stand</div>
+            <div class="text-orange-500 font-bold">$15/day</div>
+            <div class="gear-card-location text-sm text-gray-500 italic mb-1">Williamsburg pickup</div>
+            <div class="gear-card-tag inline-block text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold mb-1">Available</div>
+            <div class="text-gray-600 text-sm mb-3">Dynamic vocal mic with desk stand and XLR-to-USB interface — podcasting, streaming, Zoom.</div>
+          </div>
+          <a href="https://form.typeform.com/to/k9OSKnEV" class="request-to-book-btn mt-auto font-bold rounded-xl px-5 py-3 text-center shadow transition bg-orange-500 hover:bg-orange-600 text-white" target="_blank" rel="noopener">Request to Book</a>
+        </div>
+        <!-- ITEM: SM58 Microphone END -->
+
+        <!-- ITEM: Instax Mini 12 START -->
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col relative">
+          <img loading="lazy" decoding="async" src="images/Instax.jpg" alt="Fujifilm Instax Mini 12 instant camera with film" class="rounded-xl mb-4 h-44 w-full object-cover">
+          <div class="flex-1">
+            <div class="font-bold text-lg mb-1">Fujifilm Instax Mini 12 Camera w/ Film</div>
+            <div class="text-orange-500 font-bold">$25/day</div>
+            <div class="gear-card-location text-sm text-gray-500 italic mb-1">East Williamsburg pickup</div>
+            <div class="gear-card-tag inline-block text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold mb-1">Available</div>
+            <div class="text-gray-600 text-sm mb-3">Classic instant camera; includes one pack of film and protective case.</div>
+          </div>
+          <a href="https://form.typeform.com/to/p7dNJIcJ" class="request-to-book-btn mt-auto font-bold rounded-xl px-5 py-3 text-center shadow transition bg-orange-500 hover:bg-orange-600 text-white" target="_blank" rel="noopener">Request to Book</a>
+        </div>
+        <!-- ITEM: Instax END -->
+
+        <!-- ITEM: Olympus Stylus Epic Zoom 80 START -->
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col relative">
+          <img loading="lazy" decoding="async" src="images/Olympus.jpg" alt="Olympus Stylus Epic Zoom 80 point-and-shoot 35mm film camera" class="rounded-xl mb-4 h-44 w-full object-cover">
+          <div class="flex-1">
+            <div class="font-bold text-lg mb-1">Olympus Stylus Epic Zoom 80 Film Camera + 1 Roll Film</div>
+            <div class="text-orange-500 font-bold">$40/day</div>
+            <div class="gear-card-location text-sm text-gray-500 italic mb-1">Williamsburg pickup</div>
+            <div class="gear-card-tag inline-block text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold mb-1">Available</div>
+            <div class="text-gray-600 text-sm mb-3">Compact 35mm point-and-shoot with sharp Zuiko lens. Includes fresh roll of Kodak Gold.</div>
+          </div>
+          <a href="https://form.typeform.com/to/CpxLfDwB" class="request-to-book-btn mt-auto font-bold rounded-xl px-5 py-3 text-center shadow transition bg-orange-500 hover:bg-orange-600 text-white" target="_blank" rel="noopener">Request to Book</a>
+        </div>
+        <!-- ITEM: Olympus END -->
+
+        <!-- ITEM: GoPro Hero7 Black START -->
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col relative">
+          <img loading="lazy" decoding="async" src="images/gopro_hero10.avif" alt="GoPro Hero7 Black action camera with 64GB SD and extra batteries" class="rounded-xl mb-4 h-44 w-full object-cover">
+          <div class="flex-1">
+            <div class="font-bold text-lg mb-1">GoPro Hero7 Black Action Camera</div>
+            <div class="text-orange-500 font-bold">$30/day</div>
+            <div class="gear-card-location text-sm text-gray-500 italic mb-1">Williamsburg pickup</div>
+            <div class="gear-card-tag inline-block text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold mb-1">Available</div>
+            <div class="text-gray-600 text-sm mb-3">Rugged 4K action cam with HyperSmooth; waterproof to 33 ft. Two batteries + 64GB card.</div>
+          </div>
+          <a href="https://form.typeform.com/to/DdZIRWGM" class="request-to-book-btn mt-auto font-bold rounded-xl px-5 py-3 text-center shadow transition bg-orange-500 hover:bg-orange-600 text-white" target="_blank" rel="noopener">Request to Book</a>
+        </div>
+        <!-- ITEM: GoPro END -->
+
+        <!-- ITEM: Insta360 ONE X2 START -->
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col relative">
+          <img loading="lazy" decoding="async" src="images/Insta360.png" alt="Insta360 ONE X2 360-degree camera with selfie stick and 64GB card" class="rounded-xl mb-4 h-44 w-full object-cover">
+          <div class="flex-1">
+            <div class="font-bold text-lg mb-1">Insta360 ONE X2 360 Camera</div>
+            <div class="text-orange-500 font-bold">$45/day</div>
+            <div class="gear-card-location text-sm text-gray-500 italic mb-1">Williamsburg pickup</div>
+            <div class="gear-card-tag inline-block text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold mb-1">Available</div>
+            <div class="text-gray-600 text-sm mb-3">Pocket 360° cam with FlowState stabilization. Includes invisible selfie stick and 64GB card.</div>
+          </div>
+          <a href="https://form.typeform.com/to/tVH3O9jY" class="request-to-book-btn mt-auto font-bold rounded-xl px-5 py-3 text-center shadow transition bg-orange-500 hover:bg-orange-600 text-white" target="_blank" rel="noopener">Request to Book</a>
+        </div>
+        <!-- ITEM: Insta360 END -->
+
+        <!-- ITEM: 2-Person Tent START -->
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col relative">
+          <img loading="lazy" decoding="async" src="images/2 Person Tent.jpg" alt="2-person camping tent with rainfly and stakes" class="rounded-xl mb-4 h-44 w-full object-cover">
+          <div class="flex-1">
+            <div class="font-bold text-lg mb-1">2-Person Camping Tent</div>
+            <div class="text-orange-500 font-bold">$15/day</div>
+            <div class="gear-card-location text-sm text-gray-500 italic mb-1">East Williamsburg pickup</div>
+            <div class="gear-card-tag inline-block text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold mb-1">Available</div>
+            <div class="text-gray-600 text-sm mb-3">Lightweight waterproof tent for two; includes stakes and rainfly.</div>
+          </div>
+          <a href="https://form.typeform.com/to/hPo949QE" class="request-to-book-btn mt-auto font-bold rounded-xl px-5 py-3 text-center shadow transition bg-orange-500 hover:bg-orange-600 text-white" target="_blank" rel="noopener">Request to Book</a>
+        </div>
+        <!-- ITEM: Tent END -->
+
+        <!-- ITEM: Baseball Gloves START -->
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col relative">
+          <img loading="lazy" decoding="async" src="images/Gloves.JPG" alt="Pair of adult baseball gloves with ball" class="rounded-xl mb-4 h-44 w-full object-cover">
+          <div class="flex-1">
+            <div class="font-bold text-lg mb-1">Baseball Gloves (2)</div>
+            <div class="text-orange-500 font-bold">$20/day</div>
+            <div class="gear-card-location text-sm text-gray-500 italic mb-1">Clinton Hill pickup</div>
+            <div class="gear-card-tag inline-block text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold mb-1">Available</div>
+            <div class="text-gray-600 text-sm mb-3">Broken-in right and left-hand gloves. Ball included.</div>
+          </div>
+          <a href="https://form.typeform.com/to/JnKtDwxm" class="request-to-book-btn mt-auto font-bold rounded-xl px-5 py-3 text-center shadow transition bg-orange-500 hover:bg-orange-600 text-white" target="_blank" rel="noopener">Request to Book</a>
+        </div>
+        <!-- ITEM: Baseball Gloves END -->
+
+        <!-- ITEM: Camping/Beach Chairs START -->
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col relative">
+          <img loading="lazy" decoding="async" src="images/Camping Chair.jpg" alt="Set of two camping or beach fold-up chairs with cup-holders" class="rounded-xl mb-4 h-44 w-full object-cover">
+          <div class="flex-1">
+            <div class="font-bold text-lg mb-1">Camping/Beach Chairs (Set of 2)</div>
+            <div class="text-orange-500 font-bold">$15/day</div>
+            <div class="gear-card-location text-sm text-gray-500 italic mb-1">Clinton Hill pickup</div>
+            <div class="gear-card-tag inline-block text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold mb-1">Available</div>
+            <div class="text-gray-600 text-sm mb-3">Fold-up chairs with carry bags. Perfect for picnics, beach days, or concerts.</div>
+          </div>
+          <a href="https://form.typeform.com/to/sGVFlmFf" class="request-to-book-btn mt-auto font-bold rounded-xl px-5 py-3 text-center shadow transition bg-orange-500 hover:bg-orange-600 text-white" target="_blank" rel="noopener">Request to Book</a>
+        </div>
+        <!-- ITEM: Camping Chairs END -->
+
+        <!-- ITEM: Spikeball START -->
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col relative">
+          <img loading="lazy" decoding="async" src="images/spikeball_set.jpg" alt="Spikeball roundnet game set with frame and balls" class="rounded-xl mb-4 h-44 w-full object-cover">
+          <div class="flex-1">
+            <div class="font-bold text-lg mb-1">Spikeball Set</div>
+            <div class="text-orange-500 font-bold">$10/day</div>
+            <div class="gear-card-location text-sm text-gray-500 italic mb-1">Williamsburg pickup</div>
+            <div class="gear-card-tag inline-block text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold mb-1">Available</div>
+            <div class="text-gray-600 text-sm mb-3">Complete round-net set (net, frame, 3 balls). Packs down for easy transport.</div>
+          </div>
+          <a href="https://form.typeform.com/to/SCyExK5l" class="request-to-book-btn mt-auto font-bold rounded-xl px-5 py-3 text-center shadow transition bg-orange-500 hover:bg-orange-600 text-white" target="_blank" rel="noopener">Request to Book</a>
+        </div>
+        <!-- ITEM: Spikeball END -->
+
+        <!-- ITEM: Fender Jazz Bass START -->
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col relative">
+          <img loading="lazy" decoding="async" src="images/Fender Bass.JPG" alt="Fender Jazz Bass guitar with padded gig bag and strap" class="rounded-xl mb-4 h-44 w-full object-cover">
+          <div class="flex-1">
+            <div class="font-bold text-lg mb-1">Fender Jazz Bass Guitar w/ Gig Bag</div>
+            <div class="text-orange-500 font-bold">$35/day</div>
+            <div class="gear-card-location text-sm text-gray-500 italic mb-1">Williamsburg pickup</div>
+            <div class="gear-card-tag inline-block text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold mb-1">Available</div>
+            <div class="text-gray-600 text-sm mb-3">Classic 4-string Jazz Bass, recently set up. Includes padded gig bag and strap.</div>
+          </div>
+          <a href="https://form.typeform.com/to/T3IAiQE5" class="request-to-book-btn mt-auto font-bold rounded-xl px-5 py-3 text-center shadow transition bg-orange-500 hover:bg-orange-600 text-white" target="_blank" rel="noopener">Request to Book</a>
+        </div>
+        <!-- ITEM: Fender END -->
+
+        <!-- ITEM: Toolbox + Drill START -->
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col relative">
+          <img loading="lazy" decoding="async" src="images/Toolbox.jpg" alt="Toolbox with cordless drill, bits, and hand tools" class="rounded-xl mb-4 h-44 w-full object-cover">
+          <div class="flex-1">
+            <div class="font-bold text-lg mb-1">Toolbox with Power Drill &amp; Hand Tools</div>
+            <div class="text-orange-500 font-bold">$15/day</div>
+            <div class="gear-card-location text-sm text-gray-500 italic mb-1">Clinton Hill pickup</div>
+            <div class="gear-card-tag inline-block text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold mb-1">Available</div>
+            <div class="text-gray-600 text-sm mb-3">Sturdy toolbox with cordless drill, bits, hammer, screwdrivers, wrench, and fasteners.</div>
+          </div>
+          <a href="https://form.typeform.com/to/nN659HJE" class="request-to-book-btn mt-auto font-bold rounded-xl px-5 py-3 text-center shadow transition bg-orange-500 hover:bg-orange-600 text-white" target="_blank" rel="noopener">Request to Book</a>
+        </div>
+        <!-- ITEM: Toolbox END -->
+
+        <!-- ITEM: Babolat Aeropro Drive START -->
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col relative">
+          <img loading="lazy" decoding="async" src="images/Tennis.JPG" alt="Babolat Aeropro Drive tennis racket, freshly re-gripped" class="rounded-xl mb-4 h-44 w-full object-cover">
+          <div class="flex-1">
+            <div class="font-bold text-lg mb-1">Babolat Aeropro Drive Tennis Racket</div>
+            <div class="text-orange-500 font-bold">$15/day</div>
+            <div class="gear-card-location text-sm text-gray-500 italic mb-1">Williamsburg pickup</div>
+            <div class="gear-card-tag inline-block text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold mb-1">Available</div>
+            <div class="text-gray-600 text-sm mb-3">100 sq in head, 10.6 oz strung, newly re-gripped — ready to play.</div>
+          </div>
+          <a href="https://form.typeform.com/to/aNhqDc2Q" class="request-to-book-btn mt-auto font-bold rounded-xl px-5 py-3 text-center shadow transition bg-orange-500 hover:bg-orange-600 text-white" target="_blank" rel="noopener">Request to Book</a>
+        </div>
+        <!-- ITEM: Babolat END -->
+
+        <!-- ITEM: PUGG Mini Soccer Goals START -->
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col relative">
+          <img loading="lazy" decoding="async" src="images/soccer_goals.jpeg" alt="PUGG mini pop-up soccer goals pair with carry case" class="rounded-xl mb-4 h-44 w-full object-cover">
+          <div class="flex-1">
+            <div class="font-bold text-lg mb-1">PUGG Mini Soccer Goals (Pair)</div>
+            <div class="text-orange-500 font-bold">$10/day</div>
+            <div class="gear-card-location text-sm text-gray-500 italic mb-1">Williamsburg pickup</div>
+            <div class="gear-card-tag inline-block text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold mb-1">Available</div>
+            <div class="text-gray-600 text-sm mb-3">Pair of 4-ft pop-up goals with carry case. Set up in seconds for park games.</div>
+          </div>
+          <a href="https://form.typeform.com/to/TzhEuRFX" class="request-to-book-btn mt-auto font-bold rounded-xl px-5 py-3 text-center shadow transition bg-orange-500 hover:bg-orange-600 text-white" target="_blank" rel="noopener">Request to Book</a>
+        </div>
+        <!-- ITEM: PUGG Goals END -->
+
+        <!-- ITEM: Fly Racing Trekker Helmet START -->
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col relative">
+          <img loading="lazy" decoding="async" src="images/Helmet.JPG" alt="Fly Racing Trekker black dual-sport motorbike helmet size M" class="rounded-xl mb-4 h-44 w-full object-cover">
+          <div class="flex-1">
+            <div class="font-bold text-lg mb-1">Fly Racing Trekker Black Motorbike Helmet</div>
+            <div class="text-orange-500 font-bold">$20/day</div>
+            <div class="gear-card-location text-sm text-gray-500 italic mb-1">Clinton Hill pickup</div>
+            <div class="gear-card-tag inline-block text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold mb-1">Available</div>
+            <div class="text-gray-600 text-sm mb-3">DOT-approved dual-sport helmet with face shield and peak visor. Size Medium (57–58 cm).</div>
+          </div>
+          <a href="https://form.typeform.com/to/Su6lUwK4" class="request-to-book-btn mt-auto font-bold rounded-xl px-5 py-3 text-center shadow transition bg-orange-500 hover:bg-orange-600 text-white" target="_blank" rel="noopener">Request to Book</a>
+        </div>
+        <!-- ITEM: Helmet END -->
+
+        <!-- ITEM: Pickleball Set START -->
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col relative">
+          <img loading="lazy" decoding="async" src="images/Pickleball.jpg" alt="Pickleball net and four paddles with chalk and balls" class="rounded-xl mb-4 h-44 w-full object-cover">
+          <div class="flex-1">
+            <div class="font-bold text-lg mb-1">Pickleball Net &amp; 4 Paddle Set w/ Chalk</div>
+            <div class="text-orange-500 font-bold">$20/day</div>
+            <div class="gear-card-location text-sm text-gray-500 italic mb-1">East Williamsburg pickup</div>
+            <div class="gear-card-tag inline-block text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold mb-1">Available</div>
+            <div class="text-gray-600 text-sm mb-3">Portable regulation-width net, four composite paddles, six outdoor balls.</div>
+          </div>
+          <a href="https://form.typeform.com/to/Q5iU1FKC" class="request-to-book-btn mt-auto font-bold rounded-xl px-5 py-3 text-center shadow transition bg-orange-500 hover:bg-orange-600 text-white" target="_blank" rel="noopener">Request to Book</a>
+        </div>
+        <!-- ITEM: Pickleball END -->
+
+        <!-- ITEM: Yeti Tundra Cooler 45qt (Unavailable) START -->
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col relative opacity-60 pointer-events-none">
+          <img loading="lazy" decoding="async" src="images/Yeti Cooler.jpg" alt="Yeti Tundra 45 quart cooler" class="rounded-xl mb-4 h-44 w-full object-cover">
+          <div class="flex-1">
+            <div class="font-bold text-lg mb-1">Yeti Tundra Cooler (45qt)</div>
+            <div class="text-orange-500 font-bold">$35/day</div>
+            <div class="gear-card-location text-sm text-gray-500 italic mb-1">Clinton Hill pickup</div>
+            <div class="gear-card-tag inline-block text-xs bg-gray-700 text-white px-2 py-0.5 rounded-full font-semibold mb-1">Unavailable</div>
+            <div class="text-gray-600 text-sm mb-3">Ultra-insulated cooler keeps ice for days — beach trips, camping, tailgates.</div>
+          </div>
+          <a href="#" class="mt-auto font-bold rounded-xl px-5 py-3 text-center shadow transition bg-gray-300 text-gray-500 cursor-not-allowed" tabindex="-1" aria-disabled="true">Unavailable</a>
+        </div>
+        <!-- ITEM: Yeti END -->
+
+        <!-- ITEM: Sony SRS-XP700 (Unavailable) START -->
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col relative opacity-60 pointer-events-none">
+          <img loading="lazy" decoding="async" src="images/Sony.png" alt="Sony SRS-XP700 party speaker with built-in lights" class="rounded-xl mb-4 h-44 w-full object-cover">
+          <div class="flex-1">
+            <div class="font-bold text-lg mb-1">Sony SRS-XP700 Party Speaker</div>
+            <div class="text-orange-500 font-bold">$45/day</div>
+            <div class="gear-card-location text-sm text-gray-500 italic mb-1">Williamsburg pickup</div>
+            <div class="gear-card-tag inline-block text-xs bg-gray-700 text-white px-2 py-0.5 rounded-full font-semibold mb-1">Unavailable</div>
+            <div class="text-gray-600 text-sm mb-3">Rechargeable Bluetooth speaker with party lights; weather-resistant and portable.</div>
+          </div>
+          <a href="#" class="mt-auto font-bold rounded-xl px-5 py-3 text-center shadow transition bg-gray-300 text-gray-500 cursor-not-allowed" tabindex="-1" aria-disabled="true">Unavailable</a>
+        </div>
+        <!-- ITEM: Sony END -->
+      </div>
+
+      <noscript>
+        <p class="text-center text-sm text-gray-500 mt-4">
+          JavaScript is off — you’re seeing the full static list.
+        </p>
+      </noscript>
     </section>
+
     <div class="text-center text-sm text-gray-400 mt-6">
-  Have gear to rent out? <a href="https://form.typeform.com/to/En2q9WeN" class="underline hover:text-orange-500">List it with Spare</a>
-</div>
+      Have gear to rent out? <a href="https://form.typeform.com/to/En2q9WeN" class="underline hover:text-orange-500">List it with Spare</a>
+    </div>
+
     <section id="howItWorksSection" class="mt-16 max-w-2xl mx-auto text-center bg-white shadow rounded-2xl px-6 py-8 mb-12">
       <h3 class="text-2xl font-extrabold text-gray-900 mb-4">
         How It Works <span class="align-middle text-base text-orange-500">✨</span>
       </h3>
-<ul class="text-base space-y-2 mb-5">
-  <li class="inline-flex items-center gap-2 text-gray-700 justify-center">
-    <span>🔎 <b>Browse &amp; Pick:</b> Find the gear you need.</span>
-  </li>
-  <li class="inline-flex items-center gap-2 text-gray-700 justify-center">
-    <span>📝 <b>Request It:</b> Hit “Request to Book” and tell us your dates.</span>
-  </li>
-  <li class="inline-flex items-center gap-2 text-gray-700 justify-center">
-    <span>📲 <b>Get Confirmed:</b> We’ll text to confirm and set up pickup/payment.</span>
-  </li>
-  <li class="inline-flex items-center gap-2 text-gray-700 justify-center">
-    <span>🤝 <b>Pickup &amp; Go:</b> Bring your ID, grab your gear, enjoy, then return!
-
-</span>
-  </li>
-</ul>
-      
-
+      <ul class="text-base space-y-2 mb-5">
+        <li class="inline-flex items-center gap-2 text-gray-700 justify-center"><span>🔎 <b>Browse &amp; Pick:</b> Find the gear you need.</span></li>
+        <li class="inline-flex items-center gap-2 text-gray-700 justify-center"><span>📝 <b>Request It:</b> Hit “Request to Book” and tell us your dates.</span></li>
+        <li class="inline-flex items-center gap-2 text-gray-700 justify-center"><span>📲 <b>Get Confirmed:</b> We’ll text to confirm and set up pickup/payment.</span></li>
+        <li class="inline-flex items-center gap-2 text-gray-700 justify-center"><span>🤝 <b>Pickup &amp; Go:</b> Bring your ID, grab your gear, enjoy, then return!</span></li>
+      </ul>
       <div class="mt-3 text-xs text-gray-400 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-x-4 gap-y-1">
         <span><span class="mr-1">🪪</span>Valid ID required</span>
         <span><span class="mr-1">🏠</span>Currently serving Brooklyn residents</span>
@@ -123,310 +359,189 @@
     </section>
   </main>
 
-
   <!-- ================== FOOTER ================== -->
   <footer class="mt-auto py-8 bg-white text-center text-gray-400 text-xs border-t">
     &copy; 2025 Spare. Made with 🧡 in Brooklyn. &nbsp; | &nbsp;
     <a href="mailto:spareteamnyc@gmail.com" class="text-orange-500 hover:underline">Contact</a>
-    
   </footer>
 
+  <!-- Typeform Embed Script (optional; page works without it) -->
+  <script src="https://embed.typeform.com/embed.js" defer></script>
   <script>
-    // ========== GEAR DATA ==========
-// ======== GEAR INVENTORY: EDIT THIS LIST ========
-// To add/edit gear, just update the fields below:
-// - name:           The name/title of the item
-// - price:          Rental price per day (number, no $ sign)
-// - img:            Image URL (for gear photo)
-// - location:       Pickup location or neighborhood
-// - description:    Short description for the card
-// - tag:            "Available", "Unavailable", "Rented", or "Available Soon"
-const gearData = [
-  {
-    name: "JBL PartyBox 120 Boombox",
-    price: 35,
-    img: "images/JBL 120.jpg",
-    location: "Williamsburg",
-    description: "Huge battery-powered Bluetooth speaker. Perfect for parties and events, indoors or outdoors. Aux cable included.",
-    tag: "Available",
-    typeform: "https://form.typeform.com/to/QDdHCHMu",
-    keywords: ["speaker", "Bluetooth speaker", "party speaker", "boombox", "JBL"]
-  },
-  {
-    name: "SM58 Microphone w/ Desk Stand",
-    price: 15,
-    img: "images/SM58 Mic.JPG",
-    location: "Williamsburg",
-    description: "SM58 dynamic microphone with adjustable desk stand and XLR-to-USB interface. Great for podcasting, streaming, recording, or Zoom meetings.",
-    tag: "Available",
-    typeform: "https://form.typeform.com/to/k9OSKnEV",
-    keywords: ["microphone", "podcast mic", "USB mic", "desk mic", "recording microphone"]
-  },
-  {
-    name: "Fujifilm Instax Mini 12 Camera w/ Film",
-    price: 25,
-    img: "images/Instax.jpg",
-    location: "East Williamsburg",
-    description: "Classic instant camera for retro party snapshots. Includes 1 pack of film and a protective case.",
-    tag: "Available",
-    typeform: "https://form.typeform.com/to/p7dNJIcJ",
-    keywords: ["polaroid", "instant camera", "Instax", "Fujifilm", "film camera"]
-  },
-  {
-    name: "Olympus Stylus Epic Zoom 80 Film Camera + 1 Roll Film",
-    price: 40,
-    img: "images/Olympus.jpg",
-    location: "Williamsburg",
-    description: "Compact point-and-shoot 35 mm camera with sharp Zuiko zoom lens. One fresh roll of Kodak Gold included.",
-    tag: "Available",
-    typeform: "https://form.typeform.com/to/CpxLfDwB",
-    keywords: ["film camera", "Olympus", "point-and-shoot", "35 mm camera", "vintage camera"]
-  },
-  {
-    name: "GoPro Hero7 Black Action Camera",
-    price: 30,
-    img: "images/gopro_hero10.avif",
-    location: "Williamsburg",
-    description: "Rugged 5.3 K action cam with HyperSmooth 4.0 stabilization, waterproof to 33 ft. Includes two batteries and 64 GB SD card.",
-    tag: "Available",
-    typeform: "https://form.typeform.com/to/DdZIRWGM",
-    keywords: ["GoPro", "action camera", "sports camera", "adventure cam", "4K"]
-  },
-  {
-    name: "Insta360 ONE X2 360 Camera",
-    price: 45,
-    img: "images/Insta360.png",
-    location: "Williamsburg",
-    description: "Pocket-size 360 ° cam with FlowState stabilization. Comes with invisible selfie stick and 64 GB SD card.",
-    tag: "Available",
-    typeform: "https://form.typeform.com/to/tVH3O9jY",
-    keywords: ["360 camera", "Insta360", "VR camera", "action cam", "ONE X2"]
-  },
-  {
-    name: "2-Person Camping Tent ",
-    price: 15,
-    img: "images/2 Person Tent.jpg",
-    location: "East Williamsburg",
-    description: "Lightweight, waterproof backpacking tent. Fits two adults comfortably; stakes and rainfly included.",
-    tag: "Available",
-    typeform: "https://form.typeform.com/to/hPo949QE",
-    keywords: ["tent", "camping", "backpacking", "outdoor gear", "two-person tent"]
-  },
-  {
-    name: "Baseball Gloves (2)",
-    price: 20,
-    img: "images/Gloves.JPG",
-    location: "Clinton Hill",
-    description: "Pair of broken-in adult baseball gloves—one right-hand, one left-hand throw. Ball included.",
-    tag: "Available",
-    typeform: "https://form.typeform.com/to/JnKtDwxm",
-    keywords: ["baseball", "glove", "mitt", "sports gear", "catch"]
-  },
-  {
-    name: "Camping/Beach Chairs (Set of 2)",
-    price: 15,
-    img: "images/Camping Chair.jpg",
-    location: "Clinton Hill",
-    description: "Fold-up chairs with cup-holders and carry bags. Perfect for picnics, beach days, or concerts in the park.",
-    tag: "Available",
-    typeform: "https://form.typeform.com/to/sGVFlmFf",
-    keywords: ["camp chair", "beach chair", "folding chair", "outdoor seating"]
-  },
-  {
-    name: "Spikeball Set",
-    price: 10,
-    img: "images/spikeball_set.jpg",
-    location: "Williamsburg",
-    description: "Complete round-net game set (net, frame, and 3 balls). Folds down for easy transport.",
-    tag: "Available",
-    typeform: "https://form.typeform.com/to/SCyExK5l",
-    keywords: ["Spikeball", "roundnet", "beach game", "yard game", "outdoor game"]
-  },
-  {
-    name: "Fender Jazz Bass Guitar w/ Gig Bag",
-    price: 35,
-    img: "images/Fender Bass.JPG",
-    location: "Williamsburg",
-    description: "Classic 4-string Fender Jazz Bass, recently set up, with padded gig bag and strap.",
-    tag: "Available",
-    typeform: "https://form.typeform.com/to/T3IAiQE5",
-    keywords: ["bass guitar", "Fender", "Jazz Bass", "instrument", "music gear"]
-  },
-  {
-    name: "Toolbox with Power Drill & Hand Tools",
-    price: 15,
-    img: "images/Toolbox.jpg",
-    location: "Clinton Hill",
-    description: "Sturdy toolbox containing cordless drill, drill bits, hammer, screwdrivers, wrench, and assorted fasteners.",
-    tag: "Available",
-    typeform: "https://form.typeform.com/to/nN659HJE",
-    keywords: ["tools", "drill", "toolbox", "DIY", "hand tools"]
-  },
-  {
-    name: "Babolat Aeropro Drive Tennis Racket",
-    price: 15,
-    img: "images/Tennis.JPG",
-    location: "Williamsburg",
-    description: "100 sq in head, 10.6 oz strung, freshly re-gripped. Suitable for intermediate to advanced players.",
-    tag: "Available",
-    typeform: "https://form.typeform.com/to/aNhqDc2Q",
-    keywords: ["tennis racket", "Babolat", "Aeropro Drive", "sports gear"]
-  },
-  {
-    name: "PUGG Mini Soccer Goals (Pair)",
-    price: 10,
-    img: "images/soccer_goals.jpeg",
-    location: "Williamsburg",
-    description: "Pair of 4 ft pop-up goals with carry case. Sets up in seconds for pickup games in the park.",
-    tag: "Available",
-    typeform: "https://form.typeform.com/to/TzhEuRFX",
-    keywords: ["soccer goals", "mini goals", "PUGG", "pop-up goals", "soccer net"]
-  },
-  {
-    name: "Fly Racing Trekker Black Motorbike Helmet",
-    price: 20,
-    img: "images/Helmet.JPG",
-    location: "Clinton Hill",
-    description: "DOT-approved dual-sport helmet with integrated face shield and peak visor. Medium size (57–58 cm).",
-    tag: "Available",
-    typeform: "https://form.typeform.com/to/Su6lUwK4",
-    keywords: ["motorbike helmet", "dual-sport helmet", "Fly Racing", "protective gear", "motorcycle"]
-  },
-  {
-    name: "Pickleball Net & 4 Paddle Set w/ Chalk",
-    price: 20,
-    img: "images/Pickleball.jpg",
-    location: "East Williamsburg",
-    description: "Regulation-width portable net, four composite paddles, and six outdoor balls.",
-    tag: "Available",
-    typeform: "https://form.typeform.com/to/Q5iU1FKC",
-    keywords: ["pickleball", "paddles", "net", "outdoor game", "court game"]
-  },
-  {
-    name: "Yeti Tundra Cooler (45qt)",
-    price: 35,
-    img: "images/Yeti Cooler.jpg",
-    location: "Clinton Hill",
-    description: "Ultra-insulated 45 qt cooler keeps ice for days. Great for beach trips, camping, and tailgates.",
-    tag: "Unavailable",
-    typeform: "https://form.typeform.com/to/XXXXXXXX",
-    keywords: ["cooler", "Yeti", "ice chest", "camping cooler", "party cooler"]
-  },
-  {
-    name: "Sony SRS-XP700 Party Speaker",
-    price: 45,
-    img: "images/Sony.png",
-    location: "Williamsburg",
-    description: "Loud, rechargeable Bluetooth speaker with built-in party lights. Weather-resistant and portable.",
-    tag: "Unavailable",
-    typeform: "https://form.typeform.com/to/XXXXXXXX",
-    keywords: ["speaker", "Sony", "party speaker", "Bluetooth speaker", "portable speaker"]
-  }
-];
-
-
-// ==== TAG OPTIONS ====
-// Use exactly one of the following in the "tag" field above:
-// - "Available"      (shows orange action button, card normal)
-// - "Unavailable"    (button disabled, card faded)
-// - "Rented"         (button disabled, card faded)
-// - "Available Soon" (button disabled, card faded, but blue tag)
-
-
-    // ========== TAG COLORS & BUTTON STATES ==========
-    const tagStyles = {
-      "Available": {
-        badge: "bg-green-100 text-green-700",
-        button: "bg-orange-500 hover:bg-orange-600 text-white",
-        buttonText: "Request to Book",
-        disabled: false
-      },
-      "Unavailable": {
-        badge: "bg-gray-700 text-white",
-        button: "bg-gray-300 text-gray-500 cursor-not-allowed",
-        buttonText: "Unavailable",
-        disabled: true
-      },
-      "Rented": {
-        badge: "bg-yellow-100 text-yellow-800",
-        button: "bg-gray-300 text-gray-400 cursor-not-allowed",
-        buttonText: "Rented",
-        disabled: true
-      },
-      "Available Soon": {
-        badge: "bg-blue-100 text-blue-700",
-        button: "bg-blue-500 hover:bg-blue-600 text-white",
-        buttonText: "Available Soon",
-        disabled: true
-      }
-    };
-
-    
-    // ============= RENDER GEAR GRID =============
-function renderGearGrid() {
-  const grid = document.getElementById("gearGrid");
-  grid.innerHTML = "";
-  gearData.forEach((item, idx) => {
-    const tag = tagStyles[item.tag] || tagStyles["Unavailable"];
-    const opacityClass = (item.tag !== "Available") ? "opacity-60 pointer-events-none" : "";
-    // Only add the data-typeform attribute if there is a typeform for this item
-    const typeformAttr = item.typeform ? `data-typeform="${item.typeform}"` : '';
-    const card = `
-      <div class="bg-white rounded-2xl shadow p-5 flex flex-col relative ${opacityClass}">
-        <img src="${item.img}" alt="${item.name}" class="rounded-xl mb-4 h-44 w-full object-cover">
-        <div class="flex-1">
-          <div class="font-bold text-lg mb-1">${item.name}</div>
-          <div class="text-orange-500 font-bold">$${item.price}/day</div>
-          <div class="text-sm text-gray-500 italic mb-1">${item.location} pickup</div>
-          <div class="inline-block text-xs ${tag.badge} px-2 py-0.5 rounded-full font-semibold mb-1" style="margin-left:-2px;">${item.tag}</div>
-          <div class="text-gray-600 text-sm mb-3">${item.description}</div>
-        </div>
-        <a 
-          href="#" 
-          class="request-to-book-btn mt-auto font-bold rounded-xl px-5 py-3 text-center shadow transition ${tag.button}" 
-          ${typeformAttr}
-          ${tag.disabled ? 'tabindex="-1" aria-disabled="true"' : 'target="_blank"'}
-          ${tag.disabled ? '' : ''}
-          ${tag.disabled ? 'onclick="return false;"' : ''}
-        >${tag.buttonText}</a>
-      </div>
-    `;
-    grid.insertAdjacentHTML('beforeend', card);
-  });
-}
-    
-    // ============ INITIALIZE ON PAGE LOAD ============
-    document.addEventListener("DOMContentLoaded", function() {
-      renderGearGrid();
-    });
-  </script>
-  <!-- Typeform Embed Script (must be present once per page) -->
-<script src="https://embed.typeform.com/embed.js"></script>
-  
-<script>
-  // Wait for page load to attach handlers
-  document.addEventListener("DOMContentLoaded", function() {
-    // Re-run after grid is rendered to catch dynamic content
-    setTimeout(() => {
-      document.querySelectorAll('.request-to-book-btn[data-typeform]').forEach(function(btn) {
-        btn.addEventListener('click', function(e) {
+    // Enhance buttons with Typeform popup if embed.js loads; otherwise links open normally
+    window.addEventListener('load', function () {
+      if (!window.typeformEmbed) return;
+      document.querySelectorAll('.request-to-book-btn[href^="https://form.typeform.com"]').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
           e.preventDefault();
-          var tfURL = btn.getAttribute('data-typeform');
-          if (window.typeformEmbed && tfURL) {
-            window.typeformEmbed.makePopup(tfURL, {
-              mode: 'popup',
-              hideHeaders: true,
-              hideFooter: true
-            }).open();
-          } else if (tfURL) {
-            // fallback: open in new tab
-            window.open(tfURL, '_blank');
-          }
+          const tfURL = btn.getAttribute('href');
+          window.typeformEmbed.makePopup(tfURL, { mode: 'popup', hideHeaders: true, hideFooter: true }).open();
         });
       });
-    }, 0);
-  });
-</script>
+    });
+  </script>
 
+  <!-- JSON-LD for all items (helps Google understand price/availability) -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "JBL PartyBox 120 Boombox",
+      "image": "https://www.usespare.com/images/JBL%20120.jpg",
+      "description": "Battery-powered Bluetooth party speaker with aux cable.",
+      "brand": {"@type": "Brand","name": "JBL"},
+      "offers": {"@type": "Offer","priceCurrency": "USD","price": "35","availability": "https://schema.org/InStock","url": "https://www.usespare.com/"}
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "SM58 Microphone w/ Desk Stand",
+      "image": "https://www.usespare.com/images/SM58%20Mic.JPG",
+      "description": "Shure SM58 with desk stand and XLR-to-USB interface.",
+      "brand": {"@type": "Brand","name": "Shure"},
+      "offers": {"@type": "Offer","priceCurrency": "USD","price": "15","availability": "https://schema.org/InStock","url": "https://www.usespare.com/"}
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Fujifilm Instax Mini 12 Camera w/ Film",
+      "image": "https://www.usespare.com/images/Instax.jpg",
+      "description": "Instant camera including a pack of film.",
+      "brand": {"@type": "Brand","name": "Fujifilm"},
+      "offers": {"@type": "Offer","priceCurrency": "USD","price": "25","availability": "https://schema.org/InStock","url": "https://www.usespare.com/"}
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Olympus Stylus Epic Zoom 80 Film Camera + 1 Roll Film",
+      "image": "https://www.usespare.com/images/Olympus.jpg",
+      "description": "Compact 35mm point-and-shoot with Zuiko lens, film included.",
+      "brand": {"@type": "Brand","name": "Olympus"},
+      "offers": {"@type": "Offer","priceCurrency": "USD","price": "40","availability": "https://schema.org/InStock","url": "https://www.usespare.com/"}
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "GoPro Hero7 Black Action Camera",
+      "image": "https://www.usespare.com/images/gopro_hero10.avif",
+      "description": "Rugged 4K action camera with stabilization and accessories.",
+      "brand": {"@type": "Brand","name": "GoPro"},
+      "offers": {"@type": "Offer","priceCurrency": "USD","price": "30","availability": "https://schema.org/InStock","url": "https://www.usespare.com/"}
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Insta360 ONE X2 360 Camera",
+      "image": "https://www.usespare.com/images/Insta360.png",
+      "description": "Pocket-size 360° camera with FlowState stabilization.",
+      "brand": {"@type": "Brand","name": "Insta360"},
+      "offers": {"@type": "Offer","priceCurrency": "USD","price": "45","availability": "https://schema.org/InStock","url": "https://www.usespare.com/"}
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "2-Person Camping Tent",
+      "image": "https://www.usespare.com/images/2%20Person%20Tent.jpg",
+      "description": "Lightweight waterproof tent for two; stakes and rainfly.",
+      "offers": {"@type": "Offer","priceCurrency": "USD","price": "15","availability": "https://schema.org/InStock","url": "https://www.usespare.com/"}
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Baseball Gloves (2)",
+      "image": "https://www.usespare.com/images/Gloves.JPG",
+      "description": "Pair of adult baseball gloves (R/L) with ball.",
+      "offers": {"@type": "Offer","priceCurrency": "USD","price": "20","availability": "https://schema.org/InStock","url": "https://www.usespare.com/"}
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Camping/Beach Chairs (Set of 2)",
+      "image": "https://www.usespare.com/images/Camping%20Chair.jpg",
+      "description": "Two fold-up chairs with cup-holders and carry bags.",
+      "offers": {"@type": "Offer","priceCurrency": "USD","price": "15","availability": "https://schema.org/InStock","url": "https://www.usespare.com/"}
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Spikeball Set",
+      "image": "https://www.usespare.com/images/spikeball_set.jpg",
+      "description": "Complete round-net game set with 3 balls.",
+      "brand": {"@type": "Brand","name": "Spikeball"},
+      "offers": {"@type": "Offer","priceCurrency": "USD","price": "10","availability": "https://schema.org/InStock","url": "https://www.usespare.com/"}
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Fender Jazz Bass Guitar w/ Gig Bag",
+      "image": "https://www.usespare.com/images/Fender%20Bass.JPG",
+      "description": "4-string Fender Jazz Bass, set up, with gig bag.",
+      "brand": {"@type": "Brand","name": "Fender"},
+      "offers": {"@type": "Offer","priceCurrency": "USD","price": "35","availability": "https://schema.org/InStock","url": "https://www.usespare.com/"}
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Toolbox with Power Drill & Hand Tools",
+      "image": "https://www.usespare.com/images/Toolbox.jpg",
+      "description": "Toolbox with cordless drill, bits, and hand tools.",
+      "offers": {"@type": "Offer","priceCurrency": "USD","price": "15","availability": "https://schema.org/InStock","url": "https://www.usespare.com/"}
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Babolat Aeropro Drive Tennis Racket",
+      "image": "https://www.usespare.com/images/Tennis.JPG",
+      "description": "Aeropro Drive; newly re-gripped; ready to play.",
+      "brand": {"@type": "Brand","name": "Babolat"},
+      "offers": {"@type": "Offer","priceCurrency": "USD","price": "15","availability": "https://schema.org/InStock","url": "https://www.usespare.com/"}
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "PUGG Mini Soccer Goals (Pair)",
+      "image": "https://www.usespare.com/images/soccer_goals.jpeg",
+      "description": "Two 4-ft pop-up goals with carry case.",
+      "brand": {"@type": "Brand","name": "PUGG"},
+      "offers": {"@type": "Offer","priceCurrency": "USD","price": "10","availability": "https://schema.org/InStock","url": "https://www.usespare.com/"}
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Fly Racing Trekker Black Motorbike Helmet",
+      "image": "https://www.usespare.com/images/Helmet.JPG",
+      "description": "DOT-approved dual-sport helmet, size Medium.",
+      "brand": {"@type": "Brand","name": "Fly Racing"},
+      "offers": {"@type": "Offer","priceCurrency": "USD","price": "20","availability": "https://schema.org/InStock","url": "https://www.usespare.com/"}
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Pickleball Net & 4 Paddle Set w/ Chalk",
+      "image": "https://www.usespare.com/images/Pickleball.jpg",
+      "description": "Portable net, 4 paddles, 6 outdoor balls, chalk.",
+      "offers": {"@type": "Offer","priceCurrency": "USD","price": "20","availability": "https://schema.org/InStock","url": "https://www.usespare.com/"}
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Yeti Tundra Cooler (45qt)",
+      "image": "https://www.usespare.com/images/Yeti%20Cooler.jpg",
+      "description": "Ultra-insulated cooler keeps ice for days.",
+      "brand": {"@type": "Brand","name": "YETI"},
+      "offers": {"@type": "Offer","priceCurrency": "USD","price": "35","availability": "https://schema.org/OutOfStock","url": "https://www.usespare.com/"}
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Sony SRS-XP700 Party Speaker",
+      "image": "https://www.usespare.com/images/Sony.png",
+      "description": "Rechargeable Bluetooth speaker with party lights.",
+      "brand": {"@type": "Brand","name": "Sony"},
+      "offers": {"@type": "Offer","priceCurrency": "USD","price": "45","availability": "https://schema.org/OutOfStock","url": "https://www.usespare.com/"}
+    }
+  ]
+  </script>
 </body>
 </html>
